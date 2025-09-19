@@ -66,7 +66,7 @@ const MasonryGallery = () => {
     }
   };
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const handleTouchEnd = () => {
     if (!isMobile || !isDragging.current) return;
     
     const diffX = currentX.current - startX.current;
@@ -101,7 +101,7 @@ const MasonryGallery = () => {
     }
   };
 
-  const handleMouseUp = (e: React.MouseEvent) => {
+  const handleMouseUp = () => {
     if (isMobile || !isDragging.current) return;
     
     const diffX = currentX.current - startX.current;

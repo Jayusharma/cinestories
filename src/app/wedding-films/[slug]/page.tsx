@@ -21,7 +21,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
     'sanchez-brand-identity': {
       title: 'Sanchez & Maria',
       src: 'https://youtu.be/svXIAHfaToI',
-      description: 'A beautiful wedding celebration of love and joy, captured in timeless photographs that tell the story of Sanchez and Maria\'s special day.',
+      description: 'A beautiful wedding celebration of love and joy, captured in timeless photographs that tell the story of Sanchez and Maria&apos;s special day.',
       storyText: 'Every love story is unique, and theirs was no exception. From the intimate glances shared during the ceremony to the joyous laughter echoing through the reception hall, each moment was a testament to their deep connection. The golden hour light filtered through ancient oak trees, creating the perfect backdrop for their vows. Their families came together, celebrating not just a union, but the beginning of a new chapter filled with hope and endless possibilities.',
       images: ['/img4.webp', '/img5.webp', '/image1.webp', '/img4.webp', '/img5.webp', '/image1.webp', '/img4.webp', '/img5.webp', '/image1.webp', '/img4.webp', '/img5.webp', '/image1.webp'],
       testimonial: 'Working with the team was an incredible experience. They perfectly captured our vision and brought it to life with such artistic vision.',
@@ -268,7 +268,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
       <div className="py-24 px-8 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-black/80 text-2xl md:text-3xl font-light italic mb-8 leading-relaxed">
-            "{project.testimonial}"
+            &quot;{project.testimonial}&quot;
           </blockquote>
           <cite className="text-black/60 text-lg font-light">— {project.clientName}</cite>
         </div>

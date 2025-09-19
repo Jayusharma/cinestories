@@ -1,11 +1,23 @@
 "use client"
 import React, { useRef, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Eye } from 'lucide-react';
-// @ts-ignore - Splide types issue
+// @ts-expect-error - Splide types issue
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+
+
+// Define Splide types
+interface SplideInstance {
+  go(destination: string | number): void;
+  on(event: string, callback: (index: number) => void): void;
+  off(event: string, callback: (index: number) => void): void;
+}
+
+interface SplideRef {
+  splide?: SplideInstance;
+}
 
 const projects = [
   {
@@ -46,7 +58,7 @@ const projects = [
 ];
 
 const Stories = () => {
-  const splideRef = useRef<any>(null);
+  const splideRef = useRef<SplideRef | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const router = useRouter();

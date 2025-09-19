@@ -5,7 +5,6 @@ import ParallaxSection from '../components/Parallax'
 import Book from '../components/book'
 import Footer from '@/components/Footer'
 import Loader from '@/pages/Loader'
-
 import InfiniteScroller from '../components/test'
 import MasonryGallery from '@/pages/gallery'
 import Founder from '@/components/founder'
@@ -13,7 +12,7 @@ import Stories from '@/components/stories'
 const page = () => {
   return (
     <>
-      
+       <Loader />
        <WeddingHero />
        <About/>
         <InfiniteScroller />

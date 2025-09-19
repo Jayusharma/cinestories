@@ -8,7 +8,7 @@ interface LoaderProps {
 }
 
 const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
   const loaderRef = useRef<HTMLDivElement>(null);
   const curtainRef = useRef<HTMLDivElement>(null);
   const riveContainerRef = useRef<HTMLDivElement>(null);
@@ -16,7 +16,20 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initial setup
+    // Check if this is a reload or first visit
+    const hasShownLoader = sessionStorage.getItem('loaderShown');
+    
+    if (hasShownLoader) {
+      // Already shown loader in this session, hide immediately
+      setShowLoader(false);
+      if (onComplete) onComplete();
+      return;
+    }
+
+    // First visit - show loader and run animation
+    sessionStorage.setItem('loaderShown', 'true');
+
+    // Initial setup for animation
     gsap.set(progressBarRef.current, { scaleX: 0 });
     gsap.set(overlayRef.current, { opacity: 0 });
 
@@ -24,7 +37,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
       delay: 0.3,
       onComplete: () => {
         setTimeout(() => {
-          setIsVisible(false);
+          setShowLoader(false);
           if (onComplete) onComplete();
         }, 500);
       },
@@ -61,14 +74,16 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
       duration: 0.8,
       ease: "power2.inOut",
     }, "-=0.4");
+
   }, [onComplete]);
 
-  if (!isVisible) return null;
+  // Don't render anything if loader shouldn't show
+  if (!showLoader) return null;
 
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 z-[9999] bg-[#F6F3EC] flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-[9999] bg-[#F6F3EC] flex items-center justify-center overflow-hidden px-4 sm:px-6 md:px-8"
       style={{
         fontFamily: "'Inter', sans-serif"
       }}
@@ -83,15 +98,15 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
       />
 
       {/* Content container */}
-      <div className="relative z-20 flex flex-col items-center">
+      <div className="relative z-20 flex flex-col items-center w-full max-w-lg mx-auto">
         {/* Rive Animation */}
         <div
           ref={riveContainerRef}
-          className="relative mb-6"
+          className="relative mb-4 sm:mb-6"
         >
           <Rive
             src="/final.riv"
-            className="w-[450px] h-[350px]"
+            className="w-[280px] h-[220px] xs:w-[320px] xs:h-[250px] sm:w-[380px] sm:h-[300px] md:w-[450px] md:h-[350px]"
           />
           
           {/* Subtle glow behind Rive */}
@@ -101,7 +116,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
         </div>
 
         {/* Progress section */}
-        <div className="flex flex-col items-center space-y-6 w-full max-w-md px-8">
+        <div className="flex flex-col items-center space-y-4 sm:space-y-6 w-full max-w-sm sm:max-w-md px-4 sm:px-8">
           {/* Progress bar container */}
           <div className="w-full h-[1.5px] bg-black/10 relative overflow-hidden">
             <div
@@ -112,7 +127,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
 
           {/* Loading text */}
           <div className="text-center">
-            <p className="text-black/60 text-sm font-light tracking-[0.2em] uppercase">
+            <p className="text-black/60 text-xs sm:text-sm font-light tracking-[0.15em] sm:tracking-[0.2em] uppercase px-2">
               Loading Experience
             </p>
           </div>

@@ -32,10 +32,10 @@ const GlassHeader = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Wedding films", path: "/wedding-films" },
-    { name: "Couple stories", path: "/couple-shoot" },
+    { name: "Couple stories", path: "/couple-stories" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "FAQ", path: "/faq" },
+    { name: "FAQ", path: "/Faq" },
   ];
 
   return (

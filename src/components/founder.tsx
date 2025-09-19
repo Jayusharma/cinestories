@@ -7,7 +7,7 @@ export default function AboutSection() {
         
         {/* Left - Image Section */}
         <div className="flex flex-col  md:w-1/2 ">
-          <div className="relative size-[200px] md:size-[280px] rounded-full bg-amber-300 overflow-hidden  ">
+          <div className="relative size-[200px] md:size-[280px] rounded-full  overflow-hidden  ">
             <Image 
               src="/qq.jpg" 
               alt="Follow us on Instagram" 
@@ -15,7 +15,7 @@ export default function AboutSection() {
               className="w-full h-full object-cover grayscale-[50%]"
             />
           </div>
-          <div className="relative size-[200px] md:size-[280px] rounded-full bg-amber-300 overflow-hidden top-[-120px] md:top-[-120px] left-30 md:left-40">
+          <div className="relative size-[200px] md:size-[280px] rounded-full  overflow-hidden top-[-120px] md:top-[-120px] left-30 md:left-40">
             <Image 
               src="/ll.jpg" 
               alt="Follow us on Instagram" 

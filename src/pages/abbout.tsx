@@ -21,7 +21,7 @@ const about = () => {
 
           <div className="text-center "> 
             <p className="text-lg lg:text-2xl text-stone-600 font-light font-serif leading-relaxed tracking-wide max-w-3xl mx-auto">
-             We don’t just capture weddings—we preserve the poetry of your story, the laughter between tears, and the still moments that speak the loudest.
+             We don&apos;t just capture weddings—we preserve the poetry of your story, the laughter between tears, and the still moments that speak the loudest.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ const about = () => {
           {/* Final Touch */}
           <div className="relative left-10 lg:left-[45vw] top-[4vh] mb-20  ">
             <p className="text-lg  text-stone-500 font-light italic tracking-wide">
-              Because your love story deserves to be told beautifully....
+              Because your love story deserves to be <span className='block md:inline'>told beautifully....</span>
             </p>
           </div>
 

@@ -238,19 +238,19 @@ const AboutUsPage = () => {
                   </p>
                   
                   <p>
-                    Our approach is simple yet profound: we document, we don't direct. We seek the 
+                    Our approach is simple yet profound: we document, we don&apos;t direct. We seek the 
                     genuine laughter, the stolen glances, the quiet tears of joy that make your day 
                     authentically yours.
                   </p>
                   
                   <p>
-                    With years of experience and countless love stories behind our lens, we've learned 
+                    With years of experience and countless love stories behind our lens, we&apos;ve learned 
                     that the most powerful photographs are born from trust, patience, and an 
                     unwavering commitment to authenticity.
                   </p>
                   
                   <p className="font-medium text-black text-sm sm:text-base">
-                    We don't just take pictures. We preserve legacies.
+                    We don&apos;t just take pictures. We preserve legacies.
                   </p>
                 </div>
               </div>
@@ -296,19 +296,19 @@ const AboutUsPage = () => {
                   </p>
                   
                   <p>
-                    Our approach is simple yet profound: we document, we don't direct. We seek the 
+                    Our approach is simple yet profound: we document, we don&apos;t direct. We seek the 
                     genuine laughter, the stolen glances, the quiet tears of joy that make your day 
                     authentically yours.
                   </p>
                   
                   <p>
-                    With years of experience and countless love stories behind our lens, we've learned 
+                    With years of experience and countless love stories behind our lens, we&apos;ve learned 
                     that the most powerful photographs are born from trust, patience, and an 
                     unwavering commitment to authenticity.
                   </p>
                   
                   <p className="font-semibold text-black text-lg xl:text-xl">
-                    We don't just take pictures. We preserve legacies.
+                    We don&apos;t just take pictures. We preserve legacies.
                   </p>
                 </div>
               </div>
@@ -452,7 +452,7 @@ const AboutUsPage = () => {
                       <Quote className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-black/20 mx-auto mb-6 sm:mb-8" />
                       
                       <p className="text-gray-700 leading-relaxed text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 italic">
-                        "{testimonial.text}"
+                        &quot;{testimonial.text}&quot;
                       </p>
                       
                       <div className="flex justify-center mb-4 sm:mb-6">

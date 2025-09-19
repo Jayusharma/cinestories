@@ -61,10 +61,10 @@ const ParallaxSection = () => {
       }}
     >
       <h1 className="max-w-2xl text-white text-lg lg:text-3xl text-center font-love z-10 leading-12">
-        I'm here to capture the once-in-a-lifetime
+        I&apos;m here to capture the once-in-a-lifetime
       </h1>
       <h1 className="max-w-2xl text-white text-lg lg:text-3xl text-center font-love z-10 leading-12">
-        connection between you, but who says it can't be
+        connection between you, but who says it can&apos;t be
       </h1>
       <h1 className="max-w-2xl text-white text-lg lg:text-3xl text-center font-love z-10 leading-12">
         a kick-ass experience, too?

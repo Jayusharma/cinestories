@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect, use } from 'react';
-import { ArrowLeft, Heart, MapPin, Calendar } from 'lucide-react';
+import React, {  use } from 'react';
+import { ArrowLeft, Heart} from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
@@ -28,12 +28,12 @@ const StoryDetails = ({ params }: StoryDetailsProps) => {
       hero: '/h1.jpg',
       story: {
         opening: 'In the heart of Dubai, where modern luxury meets timeless tradition, two souls found their forever in each other. This is the story of Saba and Usman—a celebration that transcended cultures, united families, and created memories that will echo through generations.',
-        chapter1: 'Love has its own language, one that speaks through gentle glances, shared laughter, and quiet moments of understanding. For Saba and Usman, this language was written long before they met, in the stars above Dubai\'s gleaming skyline.',
+        chapter1: 'Love has its own language, one that speaks through gentle glances, shared laughter, and quiet moments of understanding. For Saba and Usman, this language was written long before they met, in the stars above Dubai&apos;s gleaming skyline.',
         chapter2: 'The Nikah ceremony unfolded like a dream against the backdrop of the Persian Gulf. As the evening call to prayer echoed across the city, their sacred vows were exchanged with the Burj Al Arab standing witness to this beautiful union.',
         chapter3: 'What followed was a symphony of celebration—three days of tradition, joy, and the merging of two families into one. From the intricate henna ceremonies to the elegant walima reception, every moment was a brushstroke in their love story.',
         chapter4: 'The mehndi night glowed with warmth and laughter, as generations of women came together to celebrate love in its purest form. Golden light danced across traditional fabrics, while the scent of jasmine filled the air.',
-        chapter5: 'Their walima reception was elegance personified. Under a canopy of stars and fairy lights, Dubai\'s skyline provided the perfect backdrop for their first dance as husband and wife.',
-        closing: 'Some love stories are written in the stars. Others are written in the quiet moments between heartbeats, in shared dreams, and in the promise of forever. Saba and Usman\'s story is both—a testament to love\'s power to create something beautiful, timeless, and true.'
+        chapter5: 'Their walima reception was elegance personified. Under a canopy of stars and fairy lights, Dubai&apos;s skyline provided the perfect backdrop for their first dance as husband and wife.',
+        closing: 'Some love stories are written in the stars. Others are written in the quiet moments between heartbeats, in shared dreams, and in the promise of forever. Saba and Usman&apos;s story is both—a testament to love&apos;s power to create something beautiful, timeless, and true.'
       },
       images: [
         '/img4.webp',
@@ -43,7 +43,7 @@ const StoryDetails = ({ params }: StoryDetailsProps) => {
         '/img8.webp',
         '/img4.webp'
       ],
-      testimonial: 'Every photograph tells our story with such grace and emotion. These images capture not just moments, but the very essence of our love—something we\'ll treasure forever.',
+      testimonial: 'Every photograph tells our story with such grace and emotion. These images capture not just moments, but the very essence of our love—something we&apos;ll treasure forever.',
       couple: 'Saba & Usman'
     },
     'dhruv-pippa-oleander-farms': {
@@ -56,11 +56,11 @@ const StoryDetails = ({ params }: StoryDetailsProps) => {
       hero: '/h1.jpg',
       story: {
         opening: 'Sometimes the most beautiful love stories unfold in the most unexpected places. Dhruv and Pippa chose the rolling hills of Karjat for their celebration, creating a wedding that was authentically them—rustic, intimate, and absolutely magical.',
-        chapter1: 'Love doesn\'t need grandeur to be grand. It needs authenticity, warmth, and the courage to be vulnerable. At Oleander Farms, surrounded by nature\'s simplest beauty, their love story found its perfect setting.',
+        chapter1: 'Love doesn&apos;t need grandeur to be grand. It needs authenticity, warmth, and the courage to be vulnerable. At Oleander Farms, surrounded by nature&apos;s simplest beauty, their love story found its perfect setting.',
         chapter2: 'The morning ceremony took place as golden light filtered through the trees. With wildflowers as their altar and the earth as their witness, Dhruv and Pippa exchanged vows that were as natural and unforced as the setting around them.',
         chapter3: 'Their celebration dinner was farm-to-table poetry—fresh ingredients, communal tables, and conversations that flowed like wine. This was hospitality in its truest form, where every guest felt like family.',
         chapter4: 'As the sun set over the hills, fairy lights transformed the farm into a wonderland. Their first dance happened under an open sky, with nothing but stars as their ceiling and love as their music.',
-        chapter5: 'The evening continued with acoustic melodies and storytelling around a bonfire. This wasn\'t just a wedding reception—it was a gathering of souls, a celebration of community, and a testament to love\'s simplest truths.',
+        chapter5: 'The evening continued with acoustic melodies and storytelling around a bonfire. This wasn&apos;t just a wedding reception—it was a gathering of souls, a celebration of community, and a testament to love&apos;s simplest truths.',
         closing: 'In a world that often chooses spectacle over substance, Dhruv and Pippa chose what matters most—each other, their loved ones, and the simple joy of being present in their own love story.'
       },
       images: [
@@ -273,7 +273,7 @@ const StoryDetails = ({ params }: StoryDetailsProps) => {
         <div className="max-w-3xl mx-auto text-center">
           <Heart className="w-6 h-6 text-gray-400 mx-auto mb-8" />
           <blockquote className="text-xl md:text-2xl text-gray-700 font-light italic mb-6 leading-relaxed">
-            "{story.testimonial}"
+            &quot;{story.testimonial}&quot;
           </blockquote>
           <cite className="text-gray-500 font-light">— {story.couple}</cite>
         </div>

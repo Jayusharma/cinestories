@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation'; // Add this import
 import { Heart, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -78,9 +78,9 @@ const WeddingStoriesPage = () => {
 
   // Single handleStoryClick function with actual navigation
   const handleStoryClick = (story: WeddingStory) => {
-    console.log(`Navigating to: /couple-shoot/${story.slug}`);
+    console.log(`Navigating to: /couple-stories/${story.slug}`);
     // Navigate to the actual page
-    router.push(`/couple-shoot/${story.slug}`);
+    router.push(`/couple-stories/${story.slug}`);
   };
 
   return (

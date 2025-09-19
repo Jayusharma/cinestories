@@ -3,15 +3,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-const page = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+const WeddingFilms = () => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const router = useRouter();
   
   // Touch handling refs
-  const touchStartX = useRef(0);
-  const touchStartY = useRef(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number>(0);
+  const touchStartY = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const slides = [
     {
@@ -300,4 +300,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WeddingFilms;

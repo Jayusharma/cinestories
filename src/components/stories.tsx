@@ -1,52 +1,64 @@
 "use client"
 import React, { useRef, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight, Eye } from 'lucide-react';
-// @ts-ignore - Splide types issue
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+// @ts-expect-error - Splide types issue
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+
+// Define Splide types
+interface SplideInstance {
+  go(destination: string | number): void;
+  on(event: string, callback: (index: number) => void): void;
+  off(event: string, callback: (index: number) => void): void;
+}
+
+interface SplideRef {
+  splide?: SplideInstance;
+}
+
 const projects = [
   {
     image: "/image1.webp",
-    title: "Dhruv & Pippa",
+    title: "Dhruv &amp; Pippa",
     subtitle: "What began with a spontaneous airport pickup unfolded into a love both grounding and electric. A story of timing, trust, and choosing each other - over and over ... ",
     date: "410K+ VIEWS",
-    src:"/couple-shoot/saba-usman-dubai-nikah"
+    src:"/couple-stories/saba-usman-dubai-nikah"
   },
   {
     image: "/image2.webp",
-    title: "Indu & Sahil",
+    title: "Indu &amp; Sahil",
     subtitle: "What began with a spontaneous airport pickup unfolded into a love both grounding and electric. A story of timing, trust, and choosing each other - over and over ...",
     date: "520K+ VIEWS",
-    src:"/couple-shoot/saba-usman-dubai-nikah"
+    src:"/couple-stories/saba-usman-dubai-nikah"
   },
   {
     image: "/img4.webp",
-    title: "Maitri & Aneesh",
+    title: "Maitri &amp; Aneesh",
     subtitle: "What began with a spontaneous airport pickup unfolded into a love both grounding and electric. A story of timing, trust, and choosing each other - over and over ...",
     date: "380K+ VIEWS",
-    src:"/couple-shoot/saba-usman-dubai-nikah"
+    src:"/couple-stories/saba-usman-dubai-nikah"
   },
   {
     image: "/img5.webp",
-    title: "Arya & Vaibhav",
+    title: "Arya &amp; Vaibhav",
     subtitle: "What began with a spontaneous airport pickup unfolded into a love both grounding and electric. A story of timing, trust, and choosing each other - over and over ...",
     date: "650K+ VIEWS",
-    src:"/couple-shoot/saba-usman-dubai-nikah"
+    src:"/couple-stories/saba-usman-dubai-nikah"
   },
   {
     image: "/img7.webp",
-    title: "Maya & Dev",
+    title: "Maya &amp; Dev",
     subtitle: "What began with a spontaneous airport pickup unfolded into a love both grounding and electric. A story of timing, trust, and choosing each other - over and over ...",
     date: "290K+ VIEWS",
-    src:"/couple-shoot/saba-usman-dubai-nikah"
+    src:"/couple-stories/saba-usman-dubai-nikah"
   }
 ];
 
 const Stories = () => {
-  const splideRef = useRef<any>(null);
+ const splideRef = useRef<SplideRef | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);

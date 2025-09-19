@@ -91,12 +91,12 @@ const Insta = () => {
           {/* Elegant Header */}
           <div className="mb-16">
             <h2 className="text-5xl lg:text-6xl font-light text-black mb-8 font-dream leading-none">
-              Let's create something
+              Let&apos;s create something
               <span className="block italic text-black/70">beautiful together</span>
             </h2>
             <div className="w-20 h-px bg-black/30 mx-auto mb-8"></div>
             <p className="text-gray-600 text-lg font-serif leading-relaxed max-w-2xl mx-auto">
-              Every love story is unique, and we're here to capture yours with the artistry 
+              Every love story is unique, and we&apos;re here to capture yours with the artistry 
               and authenticity it deserves.
             </p>
           </div>

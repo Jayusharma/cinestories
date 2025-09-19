@@ -11,11 +11,11 @@ export default function WeddingFAQ() {
   const faqs = [
     {
       question: "Where are you based and do you travel for weddings?",
-      answer: "We are based in Mumbai, India, but we absolutely love traveling for weddings! We cover destination weddings across India and internationally. Some of our favorite destinations include Goa, Rajasthan, Kerala, Himachal Pradesh, and we've also covered weddings in Dubai, Thailand, and Europe. Travel charges apply for outstation weddings, but we're always excited to capture your special day wherever it may be."
+      answer: "We are based in Mumbai, India, but we absolutely love traveling for weddings! We cover destination weddings across India and internationally. Some of our favorite destinations include Goa, Rajasthan, Kerala, Himachal Pradesh, and we&apos;ve also covered weddings in Dubai, Thailand, and Europe. Travel charges apply for outstation weddings, but we're always excited to capture your special day wherever it may be."
     },
     {
       question: "What is our style and how do you cover Weddings?",
-      answer: "Our photography style blends candid storytelling with artistic portraiture. We believe in capturing genuine emotions and spontaneous moments while also creating beautiful, posed shots. Our approach includes documentary-style candid photography, artistic couple portraits, traditional family and group shots, detail shots of decor, jewelry, and ceremony elements, and creative use of natural light and artistic compositions. We work discreetly to capture authentic moments while ensuring we don't miss any important traditions or ceremonies."
+      answer: "Our photography style blends candid storytelling with artistic portraiture. We believe in capturing genuine emotions and spontaneous moments while also creating beautiful, posed shots. Our approach includes documentary-style candid photography, artistic couple portraits, traditional family and group shots, detail shots of decor, jewelry, and ceremony elements, and creative use of natural light and artistic compositions. We work discreetly to capture authentic moments while ensuring we don&apos;t miss any important traditions or ceremonies."
     },
     {
       question: "What are your charges?",
@@ -35,7 +35,7 @@ export default function WeddingFAQ() {
     },
     {
       question: "How long will you take to deliver the photos or films?",
-      answer: "Our delivery timeline: Sneak Peek in 48-72 hours (15-20 edited photos), Full Photo Gallery in 3-4 weeks (400-800 edited photos), Cinematic Film in 4-6 weeks, Traditional Video in 6-8 weeks, and Wedding Album in 8-10 weeks after photo approval. We understand you're excited to see your photos, so we always provide a sneak peek within 2-3 days to share with family and friends!"
+      answer: "Our delivery timeline: Sneak Peek in 48-72 hours (15-20 edited photos), Full Photo Gallery in 3-4 weeks (400-800 edited photos), Cinematic Film in 4-6 weeks, Traditional Video in 6-8 weeks, and Wedding Album in 8-10 weeks after photo approval. We understand you&apos;re excited to see your photos, so we always provide a sneak peek within 2-3 days to share with family and friends!"
     },
     {
       question: "Do we have to pay for your travel and accommodation?",
@@ -55,7 +55,7 @@ export default function WeddingFAQ() {
     },
     {
       question: "What happens if the photographs you stored on the hard disk get deleted by some accident?",
-      answer: "Don't worry - we have multiple backup systems! Our data protection process includes dual memory cards (we shoot on cameras with two card slots for instant backup), multiple hard drives (photos are immediately backed up to 2-3 separate drives), cloud storage (additional backup on secure cloud servers), and archive storage (we maintain copies for 2+ years after delivery). Your memories are safe with us!"
+      answer: "Don&apos;t worry - we have multiple backup systems! Our data protection process includes dual memory cards (we shoot on cameras with two card slots for instant backup), multiple hard drives (photos are immediately backed up to 2-3 separate drives), cloud storage (additional backup on secure cloud servers), and archive storage (we maintain copies for 2+ years after delivery). Your memories are safe with us!"
     },
     {
       question: "How many photographers and cinematographers come to the wedding for assignment?",
@@ -73,7 +73,7 @@ export default function WeddingFAQ() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block text-black px-8 py-4 text-5xl font-light font-dream">
-            The Answers You've Been Looking For
+            The Answers You&apos;ve Been Looking For
           </div>
         </div>
 
