@@ -1,8 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F6F3EC;
   --foreground: #171717;
+}
+@font-face {
+  font-family: 'Dogla';
+  src: url("/fonts/Dogla.ttf") format("truetype");   
+}
+@font-face {
+  font-family: 'mas';
+  src: url("/fonts/mas.otf") format("opentype");   
+}
+@font-face {
+  font-family: 'Pers';
+  src: url("/fonts/Pers.otf") format("opentype");   
+}
+@font-face {
+  font-family: 'Palisade';
+  src: url("/fonts/Palisade.otf") format("opentype");   
+}
+@font-face {
+  font-family: 'dream';
+  src: url("/fonts/dream.otf") format("opentype");   
+}
+@font-face {
+  font-family: 'love';
+  src: url("/fonts/love.otf") format("opentype");   
+}
+@theme{
+  --font-Dogla: 'Dogla', sans-serif;
+  --font-mas: 'mas', sans-serif;
+  --font-Pers: 'Pers', sans-serif;
+  --font-pali: 'Palisade', sans-serif;
+  --font-dream: 'dream', sans-serif;
+  --font-love: 'love', sans-serif;
 }
 
 @theme inline {
@@ -14,7 +46,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -23,4 +55,61 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+html , body {
+   height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  margin: 0;
+  padding: 0; /* Let Lenis handle smooth scrolling */
+}
+
+
+
+/* Lenis specific styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Ensure fixed elements work properly with Lenis */
+.lenis.lenis-stopped {
+  overflow: auto;
+}
+
+.lenis.lenis-scrolling {
+  pointer-events: none;
+  pointer-events: all;
+}
+
+/* Prevent any layout shifts during pin animations */
+[data-pin-spacer] {
+  display: block !important;
+}
+
+/* Hide default scrollbar on pinned elements */
+.pin-spacer {
+  overflow: hidden !important;
+} 
+ ::-webkit-scrollbar-track {
+  background-color: #c9c6c632;     /* track color */
+} 
+
+::-webkit-scrollbar-thumb {
+  background: #9393932a;        /* scrollbar color */
+  border-radius: 200px;      /* rounded edges */
+}
+::-webkit-scrollbar {
+  width: 0px;              /* scrollbar width */
+  height: 0px;             /* horizontal scrollbar height */
+}
+@layer utilities {
+ 
 }
